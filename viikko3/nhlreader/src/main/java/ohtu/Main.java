@@ -2,6 +2,7 @@ package ohtu;
 
 import com.google.gson.Gson;
 import java.io.IOException;
+import java.util.Arrays;
 import org.apache.http.client.fluent.Request;
 
 public class Main {
@@ -17,9 +18,19 @@ public class Main {
         Player[] players = mapper.fromJson(bodyText, Player[].class);
         
         System.out.println("Oliot:");
+//        for (Player player : players) {
+//            System.out.println(player);
+//        }   
+        tulostaSuomalaiset(players);
+    }
+    
+    public static void tulostaSuomalaiset(Player[] players) {
+        Arrays.sort(players);
+        
         for (Player player : players) {
-            System.out.println(player);
-        }   
+            if (player.getNationality().equals("FIN"))
+            System.out.println(player.getName() + "\t" + player.getTeam() + " " + player.getGoals() + " + " + player.getAssists() + " = " + (player.getGoals() + player.getAssists()));
+        }
     }
   
 }
