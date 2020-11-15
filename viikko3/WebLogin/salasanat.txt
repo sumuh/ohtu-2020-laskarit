@@ -1,6 +1,1 @@
-asdf;asdf
-pekka;akkep
-user1;password1
-asdf1;asdf1
-user2;password2
-user261018;password2
+asdf;asdfasdf1
