@@ -90,8 +90,6 @@ public class Stepdefs {
         registerWith(username, password, confirmation);
     }
     
-    @When("")
-    
     @Then("a new user is created")
     public void newUserIsCreated() {
         pageHasContent("Welcome to Ohtu Application!");
